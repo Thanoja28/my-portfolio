@@ -83,8 +83,9 @@ li.logo {
   font-size: 30px;
 }
 
-li.logo a {
-  color: black;
+li.logo:hover {
+  cursor: pointer;
+  color: #2f5d62;
 }
 
 .fixed-nav li.logo {
