@@ -47,10 +47,16 @@ h1 {
 
 h3 {
   text-align: center;
+  color: #2f5d62;
 }
 
 h2 {
   text-align: center;
+  color: #2f5d62;
+}
+
+p {
+  color: #2f5d62;
 }
 
 nav {
@@ -212,6 +218,10 @@ textarea {
   justify-content: space-around;
 }
 
+.i-bg-color {
+  color: #2f5d62;
+  font-weight: bold;
+}
 .footer {
   background: #F4F4F4;
   display: flex;
