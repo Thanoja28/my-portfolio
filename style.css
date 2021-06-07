@@ -57,6 +57,7 @@ h2 {
 
 p {
   color: #2f5d62;
+  font-weight: 300;
 }
 
 nav {
@@ -236,9 +237,8 @@ textarea {
   text-align: center;
   width: 500px;
   height: 300px;
-  background: rgba(47, 93, 98, 1.0);
+  background: linear-gradient(#2f5d62, #a7c4bc);
   padding: 16px;
-  box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   margin-left: 500px;
   margin-bottom: 40px;
