@@ -10,9 +10,19 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
   <!-- to use google fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <!-- to use aos -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>
 <body>
+  <!-- js - animations -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- start of animations -->
+  <script>
+  AOS.init();
+</script>
+
   <header>
     <div class="card-product">
       <img src="images/my-photo.jpeg" />
@@ -46,7 +56,8 @@
   </div>
 
     <section class="align-section" id="section2">
-      <div class="background-color">
+      <div class="background-color" data-aos="fade-up"
+     data-aos-delay="300">
 
         <h3>CORE COMPETENCIES</h3>
           <p>Process Improvement<br>
@@ -63,7 +74,8 @@
 
       </div>
 
-      <div class = "background-color">
+      <div class = "background-color" data-aos="flip-right"
+     data-aos-delay="200">
         <h3>TECHNICAL SKILLS</h3>
         <p><b>Languages & Database:</b>
             Ruby on Rails,
@@ -84,7 +96,8 @@
         <button>Read More</button>
       </div>
 
-      <div class = "background-color">
+      <div class = "background-color" data-aos="fade-up"
+     data-aos-delay="300">
         <h3>CERTIFICATIONS & TRAININGS</h3>
         <p><b>9-Week Web Development Course</b> – Le Wagon March 2021
         <p><b>Aptech Cerfitied Web Developer</b> – Aptech Computer Education October 2015</p>
@@ -93,14 +106,16 @@
       </div>
     </section>
 
-    <div class="align-contact">
+    <div class="align-contact" ata-aos="fade-up"
+     data-aos-delay="300">
       <div class="i-bg-color">
         <i class="fas fa-home"></i><p>137 Kempton Road, E6 2NF</p>
         <i class="fas fa-phone-alt"></i><p>07305863436</p>
         <i class="fas fa-envelope-open"></i><p>thanujathanuja18@yahoo.com</p>
       </div>
 
-      <form action="mailto:thanujathanuja18@yahoo.com"  class="form-align" method="post" enctype="text/plain">
+      <form action="mailto:thanujathanuja18@yahoo.com"  class="form-align" method="post" enctype="text/plain" >
+        <label>Leave a Message</label>
         <input type="text" id="fname" name="fname" value="First Name"><br>
         <input type="text" id="lname" name="lname" value="Last Name"><br>
         <input type="text" id="email" name="email" value="Email"><br>

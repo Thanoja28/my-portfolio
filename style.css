@@ -185,7 +185,7 @@ button:hover {
 
 .align-section {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 28px;
   flex: 0 0 50%;
 }
@@ -242,6 +242,10 @@ textarea {
   border-radius: 8px;
   margin-left: 500px;
   margin-bottom: 40px;
+}
+
+label {
+  color: white;
 }
 .footer-links {
   display: flex;
