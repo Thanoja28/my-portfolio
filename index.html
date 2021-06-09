@@ -29,7 +29,7 @@
       <div class="card-product-infos">
         <h1>Thanoja Thangaraja</h1>
           <h2>Full Stack <strong>WEB DEVELOPER</strong></h2>
-          <button class="btn-color">View Portfolio</button>
+          <a href="/images/Thano_CV.pdf"><button class="btn-color">View Portfolio</button></a>
           <a href="/images/Thano_CV.pdf" download>
             <button>Download My CV</button>
           </a>
@@ -70,7 +70,10 @@
               Coding & Programming
               Problem Solving & Analysis
               Website Creation & Management</p>
-        <button>Read More</button>
+        <button class="popup" onclick="displayPop()">Read More<span class="popuptext" id="myPopup">
+          <p>Problem Solving & Analysis.
+             Website Creation & Management.</p>
+        </span></button>
 
       </div>
 
@@ -102,9 +105,33 @@
         <p><b>9-Week Web Development Course</b> – Le Wagon March 2021
         <p><b>Aptech Cerfitied Web Developer</b> – Aptech Computer Education October 2015</p>
         <p><b>Master in Multimedia Visualizer Training</b> – Apollo Computer Education Ltd., May 2012</p>
-        <button>Read More</button>
+        <button class="popup" onclick="displayPop()">Read More<span class="popuptext" id="myPopup">MS Office Certification – Visuall Computerss</span></button>
       </div>
     </section>
+
+       <h3>Getting bored? let's play <span class="score">0</span></h3>
+  <button onClick="startGame()" class="align-center">Start!</button>
+
+  <div class="game">
+    <div class="hole hole1">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole2">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole3">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole4">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole5">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole6">
+      <div class="mole"></div>
+    </div>
+  </div>
 
     <div class="align-contact" ata-aos="fade-up"
      data-aos-delay="300">
