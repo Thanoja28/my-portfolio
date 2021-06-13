@@ -1,6 +1,5 @@
 
 // Navbar Animations
-
 const nav = document.querySelector('#main');
     let topOfNav = nav.offsetTop;
     console.log(topOfNav);
@@ -17,62 +16,98 @@ const nav = document.querySelector('#main');
 
     window.addEventListener('scroll', fixNav);
 
+// -----------------------------------------------------
 
-    // Mole Game scripts
-
-    const holes = document.querySelectorAll('.hole');
-const scorebox = document.querySelector('.score');
-const moles = document.querySelectorAll('.mole');
-let lstHole;
-let timeUp = false;
-let score = 0;
-
-  function randomTime(min, max) {
-    return Math.round(Math.random() * (max - min) + min);
-  }
-
-  function randomHole(holes) {
-    const idx = Math.floor(Math.random() * holes.length);
-    const hole = holes[idx];
-    if (hole === lstHole) {
-      console.log('Ah nah thats the same one bud');
-      return randomHole(holes);
-    }
-    lstHole = hole;
-    return hole;
-  }
-
-  function peep() {
-    const time = randomTime(200, 1000);
-    const hole = randomHole(holes);
-    hole.classList.add('up');
-    setTimeout(() => {
-      hole.classList.remove('up');
-      if (!timeUp) peep();
-    }, time);
-  }
-
-  function startGame() {
-    scorebox.textContent = 0;
-    timeUp = false;
-    score = 0;
-    peep();
-    setTimeout(() => timeUp = true, 10000)
-  }
-
-  function scoregenerator(e) {
-    if(!e.isTrusted) return;
-    score++;
-    this.parentNode.classList.remove('up');
-    scorebox.textContent = score;
-  }
-
-  moles.forEach(mole => mole.addEventListener('click', scoregenerator));
-
-  // popovers display
-
-  function displayPop() {
+// popovers display
+function displayPop() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
 }
+
+// ------------------------------------------------------
+
+// knowledge breaker
+const containerQuote = document.getElementById('container-quote');
+const textQuote = document.getElementById('quote');
+const textAuthor = document.getElementById('author');
+const twitterBtn = document.getElementById('twitter');
+const newQuoteBtn = document.getElementById('quote-new');
+const loader = document.getElementById('loader');
+
+let apiQuotes = [];
+
+// Show loading
+function showLoadingSpinner() {
+  loader.hidden = false;
+  containerQuote.hidden = true;
+}
+
+// hide loading
+function removeLoadingSpinner() {
+  containerQuote.hidden = false;
+  loader.hidden = true;
+
+}
+
+// Show New Quote
+function newQuote() {
+
+  // Get a random quote from an apiQuotes array
+  const quotes = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
+
+  // Check if Author field is blank and replace it with "Unknown"
+  if (!quotes.author) {
+    textAuthor.textContent = 'Unknown';
+  }
+
+  else {
+    textAuthor.textContent = quotes.author;
+  }
+
+   // check Quote length to determine style
+   if(quotes.text.length > 150) {
+
+    textQuote.classList.add('long-quote');
+  }
+
+  else {
+    textQuote.classList.remove('long-quote');
+  }
+
+  textQuote.textContent = quotes.text;
+}
+
+// Get Quotes from API
+async function getQuotes() {
+  showLoadingSpinner();
+  const apiUrl = 'https://type.fit/api/quotes';
+
+  try {
+
+    const response = await fetch(apiUrl);
+    apiQuotes = await response.json();
+    newQuote();
+
+    // stop loader
+    removeLoadingSpinner();
+
+  } catch (error) {
+
+      alert('no Quotes found');
+  }
+}
+
+// Tweet Quote
+function tweetQuote() {
+  const twitterUrl = `https://twitter.com/intent/tweet?text=${textQuote.textContent} - ${textAuthor.textContent}`;
+  window.open(twitterUrl, '_blank');
+}
+
+//  add EventListeners for the buttons
+newQuoteBtn.addEventListener('click', newQuote);
+twitterBtn.addEventListener('click', tweetQuote);
+
+// onLoad
+getQuotes();
+
 

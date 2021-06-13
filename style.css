@@ -8,6 +8,7 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
 }
 
 *, *:before, *:after {
@@ -61,6 +62,9 @@ p {
   font-weight: 300;
 }
 
+/*-----------------------------------------------*/
+
+/* Navbar */
 nav {
   background: black;
   top: 0;
@@ -122,6 +126,7 @@ nav a:hover {
   border-radius: 5px;
 }
 
+/* Card Contents */
 .card-product {
   overflow: hidden;
   height: 350px;
@@ -157,11 +162,13 @@ nav a:hover {
   padding: 16px;
 }
 
+/* img */
 img {
   width: 400px;
   height: 400px;
 }
 
+/* button */
 button {
   text-transform: uppercase;
   padding: 14px;
@@ -192,6 +199,7 @@ button:hover {
   flex: 0 0 50%;
 }
 
+/* background-section */
 .background-color {
   background-color: rgba(255, 255, 255, 0.6);
   padding: 24px;
@@ -224,6 +232,8 @@ textarea {
   color: #2f5d62;
   font-weight: bold;
 }
+
+/* footer */
 .footer {
   background: #F4F4F4;
   display: flex;
@@ -252,6 +262,7 @@ label {
   display: flex;
   align-items: center;
 }
+
 .footer-links a {
   color: black;
   opacity: 0.15;
@@ -259,62 +270,17 @@ label {
   font-size: 24px;
   padding: 0px 10px;
 }
+
 .footer-links a:hover {
   opacity: 1;
   color: #2f5d62;
 }
+
 .footer .fa-heart {
   color: #2f5d62;
 }
 
-/* css for mole game*/
-
-.score {
-  background: rgba(255,255,255,0.2);
-  padding: 0 3rem;
-  line-height: 1;
-  border-radius: 1rem;
-}
-
-.game {
-  width: 600px;
-  height: 400px;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 3rem auto;
-}
-
-.hole {
-  flex: 1 0 33.33%;
-  overflow: hidden;
-  position: relative;
-}
-
-.hole:after {
-  display: block;
-  background: url(https://www.dlf.pt/dfpng/middlepng/5-56975_golf-hole-png-transparent-png.png) bottom center no-repeat;
-  background-size: contain;
-  content: '';
-  width: 100%;
-  height:70px;
-  position: absolute;
-  z-index: 2;
-  bottom: -30px;
-}
-
-.mole {
-  background: url(http://assets.stickpng.com/images/5c6682543ce41c0ef9f4bd09.png) bottom center no-repeat;
-  background-size: 60%;
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  height: 100%;
-  transition: all 0.4s;
-}
-
-.hole.up .mole {
-  top: 0;
-}
+/*------------------------------------------------------------------------------*/
 
 /* css for popup */
 
@@ -370,6 +336,75 @@ label {
   from {opacity: 0;}
   to {opacity:1 ;}
 }
+
+/*------------------------------------------------------------------------------*/
+
+/* knowledge breaker */
+.container-quote {
+  width: auto;
+  max-width: 900px;
+  padding: 20px 30px;
+  background-color:  rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  margin: 32px;
+  text-align: center;
+}
+
+.text-quote {
+  font-size: 2.70rem;
+}
+
+.long-quote {
+  font-size: 2rem;
+}
+
+.author-quote {
+  margin-top: 14px;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.twitter-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.twitter-button:hover {
+  color: #2f5d62;
+}
+
+.fa-twitter {
+  font-size: 1.5rem;
+}
+
+/* Loader */
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Media Queries for tablet and smaller screens */
+@media screen and (max-width: 1000px) {
+  .container-quote {
+    margin: auto 10px;
+  }
+
+  .text-quote {
+    font-size: 2rem;
+  }
+}
+
+
 
 
 

@@ -18,10 +18,12 @@
   <!-- js - animations -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <!-- start of animations -->
+  <!-- Initiation of fade animations -->
   <script>
-  AOS.init();
-</script>
+    AOS.init();
+  </script>
+
+<!-- -------------------------------------------------------------- -->
 
   <header>
     <div class="card-product">
@@ -37,29 +39,41 @@
     </div>
   </header>
 
-<nav id="main">
-    <ul>
-      <li class="logo">PORTFOLIO</li>
-      <li><a href="#">Home</a></li>
-      <li><a href="#section2">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">FAQ</a></li>
-    </ul>
+<!-- -------------------------------------------------------------- -->
+
+  <nav id="main">
+      <ul>
+        <li class="logo">PORTFOLIO</li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#section2">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
   </nav>
+
+<!-- --------------------------------------------------------------- -->
 
   <!-- personal development -->
   <div class="site-wrap">
     <h2>ABOUT</h2>
     <p>Highly analytical, dynamic, and detail-oriented professional with extensive experience
-       and a proven track record in web and software development aligned with company success. Excellent team player with the ability to work with other IT professionals in creating applications and websites to the highest standards. Proficient in creating appealing web pages by being aware and passionate about website design and the development process. Proven achievement in developing innovative digital campaign strategies by capitalizing on the latest technology solutions. Strong strategic thinker, able to translate ideas into tactical action plans and execution. Communicates with diverse populations in written, verbal, and presentation formats. Equipped with an excellent work ethic while maintaining knowledge of industry trends and
+       and a proven track record in web and software development aligned with company success.
+       Excellent team player with the ability to work with other IT professionals in creating applications
+       and websites to the highest standards. Proficient in creating appealing web pages by being aware and
+       passionate about website design and the development process. Proven achievement in developing innovative
+       digital campaign strategies by capitalizing on the latest technology solutions. Strong strategic thinker,
+       able to translate ideas into tactical action plans and execution. Communicates with diverse populations in written,
+       verbal, and presentation formats. Equipped with an excellent work ethic while maintaining knowledge of industry trends and
        marketing management best practices.</p>
   </div>
+
+<!-- --------------------------------------------------------------- -->
 
     <!-- My skills and competencies -->
     <section class="align-section" id="section2">
       <div class="background-color" data-aos="fade-up"
-     data-aos-delay="300">
+      data-aos-delay="300">
 
         <h3>CORE COMPETENCIES</h3>
           <p>Process Improvement<br>
@@ -74,13 +88,14 @@
               Website Creation & Management</p>
         <button class="popup" onclick="displayPop()">Read More<span class="popuptext" id="myPopup">
           <p>Problem Solving & Analysis.
-             Website Creation & Management.</p>
+             Website Creation & Management.
+          </p>
         </span></button>
 
       </div>
 
       <div class = "background-color" data-aos="flip-right"
-     data-aos-delay="200">
+         data-aos-delay="200">
         <h3>TECHNICAL SKILLS</h3>
         <p><b>Languages & Database:</b>
             Ruby on Rails,
@@ -91,18 +106,21 @@
             MySQL
         </p>
 
-           <p><b>Web Design & Development:</b>
+        <p><b>Web Design & Development:</b>
                Dreamweaver<br>
                Maya<br>
                Combustion
-           </p>
-            <p><b>Adobe Suite: </b>Adobe Indesign, Photoshop, Illustrator, Flash, Audition, Premier
-            Microsoft Office: Word, Excel, PowerPoint</p>
+        </p>
+        <p><b>Adobe Suite: </b>Adobe Indesign, Photoshop, Illustrator, Flash, Audition, Premier
+            Microsoft Office: Word, Excel, PowerPoint
+        </p>
+
         <button>Read More</button>
+
       </div>
 
       <div class = "background-color" data-aos="fade-up"
-     data-aos-delay="300">
+        data-aos-delay="300">
         <h3>CERTIFICATIONS & TRAININGS</h3>
         <p><b>9-Week Web Development Course</b> – Le Wagon March 2021
         <p><b>Aptech Cerfitied Web Developer</b> – Aptech Computer Education October 2015</p>
@@ -111,70 +129,88 @@
       </div>
     </section>
 
-       <!-- A small game with js -->
-       <h3 id="projects">Getting bored? let's play <span class="score">0</span></h3>
-          <button onClick="startGame()" class="align-center">Start!</button>
+<!-- ------------------------------------------------------- -->
 
-          <div class="game">
-            <div class="hole hole1">
-              <div class="mole"></div>
-            </div>
-            <div class="hole hole2">
-              <div class="mole"></div>
-            </div>
-            <div class="hole hole3">
-              <div class="mole"></div>
-            </div>
-            <div class="hole hole4">
-              <div class="mole"></div>
-            </div>
-            <div class="hole hole5">
-              <div class="mole"></div>
-            </div>
-            <div class="hole hole6">
-              <div class="mole"></div>
-            </div>
-          </div>
+      <!-- Knowledge breaker -->
+      <h2>Knowledge Breaker</h2>
+      <div class="container-quote" id="container-quote">
+
+        <!-- Quote -->
+        <div class="text-quote">
+          <span id="quote"></span>
+        </div>
+
+        <!-- Author -->
+        <div class="author-quote">
+          <span id="author"></span>
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-container">
+
+          <button class="twitter-button" id="twitter" title="Tweet this">
+            <i class="fab fa-twitter"></i>
+          </button>
+
+          <button id="quote-new">
+            New Quote
+          </button>
+        </div>
+      </div>
+
+      <!-- Loader -->
+      <div class="loader" id="loader"></div>
+      </div>
+
+<!-- ------------------------------------------------------ -->
 
     <!-- contact details -->
-    <div class="align-contact" ata-aos="fade-up"
-     data-aos-delay="300">
+    <div class="align-contact" data-aos="fade-up"
+      data-aos-delay="300">
+
       <div class="i-bg-color">
         <i class="fas fa-home"></i><p>137 Kempton Road, E6 2NF</p>
         <i class="fas fa-phone-alt"></i><p>07305863436</p>
         <i class="fas fa-envelope-open"></i><p>thanujathanuja18@yahoo.com</p>
       </div>
 
-      <!-- to get in touch with me -->
+      <!-- create a form with input details -->
       <form action="mailto:thanujathanuja18@yahoo.com"  class="form-align" method="post" enctype="text/plain" >
+
         <label>Leave a Message</label>
+
         <input type="text" id="fname" name="fname" value="First Name"><br>
         <input type="text" id="lname" name="lname" value="Last Name"><br>
         <input type="text" id="email" name="email" value="Email"><br>
         <textarea name="comments" id="comment" cols="20" rows="5"></textarea>
+
         <div>
           <button type= "reset">Reset</button>
           <button type= "submit">Submit</button>
         </div>
-      </form>
 
+      </form>
 
     </div>
 
     <!-- social links -->
     <div class="footer">
+
       <div class="footer-links">
-        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/Thanoja28"><i class="fab fa-github"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/thanu.ja.31"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com/ThanojaThangar1"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/thanojathangaraja/"><i class="fab fa-linkedin"></i></a>
       </div>
+
       <div class="footer-copyright">
         Designed by <i class="fas fa-heart"></i> Thano Ramanan
       </div>
+
     </div>
 
 <script src="index.js"></script>
+
 </body>
 </html>
