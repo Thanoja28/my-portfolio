@@ -1,5 +1,6 @@
 
 // Navbar Animations
+
 const nav = document.querySelector('#main');
     let topOfNav = nav.offsetTop;
     console.log(topOfNav);

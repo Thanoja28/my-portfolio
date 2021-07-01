@@ -33,7 +33,7 @@ body.fixed-nav .site-wrap {
 header {
   text-align: center;
   height: 50vh;
-  background: url(https://images.pexels.com/photos/3691227/pexels-photo-3691227.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) rgba(255, 255, 255, 0.4) bottom center no-repeat;
+  background: url(https://images.pexels.com/photos/3691227/pexels-photo-3691227.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) rgba(0, 0, 0, 0.2) bottom center no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -399,18 +399,96 @@ label {
 }
 
 /* Media Queries for tablet and smaller screens */
-@media screen and (max-width: 1000px) {
+
+@/*media screen and (max-width: 1000px) {
   .container-quote {
-    margin: auto 10px;
+    margin: 10px;
   }
 
   .text-quote {
     font-size: 2rem;
   }
+}*/
+
+
+/* media queries */
+
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+
+  .container-quote {
+
+    padding: 24px;
+    margin-right: 8px auto;
+
+  }
+
+  img {
+    width: 100px;
+    height: 50%;
+  }
+
+  .card-product img {
+    height: 50%;
+    width: 100px;
+  }
+
 }
 
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  img {
 
+    display: none;
+  }
 
+  .site-wrap {
+
+   width: 420px;
+   margin-right: 18px;
+
+ }
+
+ .align-section {
+
+  flex-direction: column;
+
+ }
+
+ .container-quote {
+
+    padding: 24px;
+    margin-right: 8px;
+
+  }
+
+  .text-quote {
+
+    font-size: 2rem;
+
+  }
+
+  .card-product {
+
+    width: 350px;
+    height: 350px;
+
+  }
+
+  .card-product-infos {
+
+    margin-right: 32px;
+    padding: 16px;
+
+  }
+
+  h1, h2 {
+
+    font-size: 1.5rem;
+
+  }
+
+}
 
 
 
