@@ -33,7 +33,7 @@ body.fixed-nav .site-wrap {
 header {
   text-align: center;
   height: 50vh;
-  background: url(https://images.unsplash.com/photo-1541855951501-fc42a85d86d3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGFyayUyMGdyZWVufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80) rgba(0, 0, 0, 0.1) bottom center no-repeat;
+  background: url(https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTR8fHdlYiUyMGRlc2lnbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=60) rgba(0, 0, 0, 0.1) bottom center no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -422,8 +422,13 @@ label {
   }
 
   .site-wrap {
-    margin: 16px;
-    width: 700px;
+
+    width: 600px;
+  }
+
+  footer {
+    width: 600px;
+    height: 400px;
   }
 
 }
@@ -435,10 +440,9 @@ label {
     display: none;
   }
 
-
   .site-wrap {
 
-   width: 480px;
+   width: 460px;
  }
 
  .align-section {
@@ -460,7 +464,7 @@ label {
   }
 
   .card-product {
-
+    margin-right: 44px;
     width: 350px;
     height: 350px;
 
