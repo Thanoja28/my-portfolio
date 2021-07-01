@@ -112,3 +112,6 @@ twitterBtn.addEventListener('click', tweetQuote);
 getQuotes();
 
 
+
+
+
